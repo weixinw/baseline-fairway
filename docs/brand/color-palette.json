@@ -1,0 +1,11 @@
+{
+  "theme": "warm-athletic-luxury",
+  "colors": {
+    "primary_forest": "#1F3A34",
+    "primary_charcoal": "#1C1C1E",
+    "material_walnut": "#6E4B35",
+    "neutral_off_white": "#F4F1EA",
+    "accent_champagne": "#C9A46A",
+    "accent_muted_orange_optional": "#C9753D"
+  }
+}
