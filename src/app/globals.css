@@ -192,6 +192,172 @@ h1 {
   padding: 0 0 var(--space-16);
 }
 
+.membership-section {
+  padding: 0 0 var(--space-12);
+}
+
+.membership-header {
+  margin-bottom: var(--space-6);
+}
+
+.membership-header h2 {
+  margin: var(--space-2) 0 var(--space-2);
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.membership-subhead {
+  margin: 0;
+  color: var(--color-text-muted);
+  max-width: 60ch;
+}
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.membership-card {
+  border: 1px solid var(--color-border-soft);
+  background: var(--color-surface-elevated);
+  border-radius: 1rem;
+  padding: var(--space-6);
+  box-shadow: 0 10px 20px -18px var(--color-primary-charcoal);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.membership-card h3 {
+  margin: 0;
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  color: var(--color-primary-forest);
+}
+
+.membership-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.membership-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--color-text-primary);
+}
+
+.membership-card li + li {
+  margin-top: var(--space-2);
+}
+
+.membership-price {
+  color: var(--color-primary-charcoal);
+  font-weight: 600;
+}
+
+.membership-cta {
+  width: fit-content;
+  margin-top: auto;
+}
+
+.membership-compare-desktop {
+  display: none;
+}
+
+.membership-compare-desktop table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--color-border-soft);
+  background: var(--color-surface-elevated);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.membership-compare-desktop caption {
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-material-walnut);
+}
+
+.membership-compare-desktop th,
+.membership-compare-desktop td {
+  border-top: 1px solid var(--color-border-soft);
+  vertical-align: top;
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  font-size: 0.92rem;
+}
+
+.membership-compare-desktop thead th {
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  color: var(--color-primary-forest);
+  border-top: 0;
+}
+
+.membership-compare-desktop tbody th {
+  min-width: 8rem;
+  color: var(--color-text-primary);
+}
+
+.membership-compare-desktop td ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.membership-compare-desktop td li + li {
+  margin-top: var(--space-2);
+}
+
+.membership-compare-desktop td a,
+.membership-compare-mobile a {
+  color: var(--color-primary-forest);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-primary-forest) 50%, white 50%);
+  text-underline-offset: 0.15rem;
+}
+
+.membership-compare-mobile {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.membership-compare-mobile details {
+  border: 1px solid var(--color-border-soft);
+  border-radius: 0.75rem;
+  padding: var(--space-4);
+  background: var(--color-surface-elevated);
+}
+
+.membership-compare-mobile summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  cursor: pointer;
+  font-family: var(--font-family-heading);
+  color: var(--color-primary-forest);
+}
+
+.membership-compare-mobile p {
+  margin: var(--space-3) 0 var(--space-2);
+  color: var(--color-text-muted);
+}
+
+.membership-compare-mobile ul {
+  margin: 0 0 var(--space-3);
+  padding-left: 1.1rem;
+}
+
+.membership-compare-mobile li + li {
+  margin-top: var(--space-2);
+}
+
 .social-proof-section h2 {
   margin: var(--space-2) 0 var(--space-4);
   font-family: var(--font-family-heading);
@@ -264,8 +430,21 @@ h1 {
     padding-top: clamp(4.5rem, 8vw, 6.5rem);
   }
 
+  .membership-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+
   .positioning-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-6);
+  }
+
+  .membership-compare-desktop {
+    display: block;
+  }
+
+  .membership-compare-mobile {
+    display: none;
   }
 }
