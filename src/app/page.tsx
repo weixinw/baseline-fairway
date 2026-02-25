@@ -1,4 +1,5 @@
 import { siteConfig } from "@/config/site";
+import { LeadCaptureForm } from "@/components/lead-capture-form";
 
 const membershipTiers = [
   {
@@ -212,6 +213,8 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      <LeadCaptureForm />
     </>
   );
 }
