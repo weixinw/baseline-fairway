@@ -131,6 +131,85 @@ h1 {
   max-width: 62ch;
 }
 
+.home-hero {
+  padding: var(--space-16) 0 var(--space-12);
+}
+
+.hero-subhead {
+  margin: 0 0 var(--space-8);
+  max-width: 60ch;
+  color: var(--color-text-muted);
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.positioning-section {
+  padding: 0 0 var(--space-12);
+}
+
+.positioning-header {
+  margin-bottom: var(--space-6);
+}
+
+.positioning-header h2 {
+  margin: var(--space-2) 0 0;
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.positioning-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.positioning-card {
+  border: 1px solid var(--color-border-soft);
+  background: var(--color-surface-elevated);
+  border-radius: 1rem;
+  padding: var(--space-6);
+  box-shadow: 0 10px 20px -18px var(--color-primary-charcoal);
+}
+
+.positioning-card h3 {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  color: var(--color-primary-forest);
+}
+
+.positioning-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.social-proof-section {
+  padding: 0 0 var(--space-16);
+}
+
+.social-proof-section h2 {
+  margin: var(--space-2) 0 var(--space-4);
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+}
+
+.social-proof-placeholder {
+  border: 1px dashed color-mix(in srgb, var(--color-material-walnut) 70%, white 30%);
+  background: color-mix(in srgb, var(--color-material-walnut) 12%, white 88%);
+  border-radius: 1rem;
+  padding: var(--space-6);
+}
+
+.social-proof-placeholder p {
+  margin: 0;
+  color: color-mix(in srgb, var(--color-primary-charcoal) 80%, white 20%);
+}
+
 .site-footer {
   background: var(--color-primary-charcoal);
   color: var(--color-neutral-off-white);
@@ -177,5 +256,16 @@ h1 {
 @media (max-width: 700px) {
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-hero {
+    padding-top: clamp(4.5rem, 8vw, 6.5rem);
+  }
+
+  .positioning-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
   }
 }
