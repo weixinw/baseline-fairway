@@ -1,16 +1,4 @@
-:root {
-  --color-forest: #1f3a34;
-  --color-charcoal: #1c1c1e;
-  --color-walnut: #6e4b35;
-  --color-off-white: #f4f1ea;
-  --color-champagne: #c9a46a;
-
-  --surface-main: var(--color-off-white);
-  --surface-elevated: #fbf8f2;
-  --text-primary: var(--color-charcoal);
-  --text-muted: #4c4c51;
-  --border-soft: #dfd8cc;
-}
+@import "../styles/tokens.css";
 
 *,
 *::before,
@@ -25,9 +13,9 @@ body {
 }
 
 body {
-  font-family: "Avenir Next", "Inter", "Segoe UI", Roboto, Arial, sans-serif;
-  background: var(--surface-main);
-  color: var(--text-primary);
+  font-family: var(--font-family-body);
+  background: var(--color-surface-main);
+  color: var(--color-text-primary);
   line-height: 1.5;
 }
 
@@ -55,9 +43,9 @@ a {
   position: sticky;
   top: 0;
   z-index: 20;
-  border-bottom: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--color-border-soft);
   backdrop-filter: blur(8px);
-  background: color-mix(in srgb, var(--surface-main) 92%, white 8%);
+  background: color-mix(in srgb, var(--color-surface-main) 92%, white 8%);
 }
 
 .header-inner {
@@ -76,14 +64,14 @@ a {
 
 .brand-name {
   margin: 0;
-  font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+  font-family: var(--font-family-heading);
   font-size: 1.125rem;
   letter-spacing: 0.02em;
 }
 
 .brand-location {
   margin: 0;
-  color: var(--text-muted);
+  color: var(--color-text-muted);
   font-size: 0.8125rem;
 }
 
@@ -98,26 +86,26 @@ a {
 
 .nav-list a {
   font-size: 0.925rem;
-  color: var(--text-muted);
+  color: var(--color-text-muted);
 }
 
 .nav-list a:hover {
-  color: var(--color-forest);
+  color: var(--color-primary-forest);
 }
 
 .cta-button {
   padding: 0.625rem 1rem;
-  border-radius: 999px;
-  background: var(--color-charcoal);
-  color: var(--color-off-white);
-  border: 1px solid var(--color-charcoal);
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-charcoal);
+  color: var(--color-neutral-off-white);
+  border: 1px solid var(--color-primary-charcoal);
   transition: background-color 150ms ease, border-color 150ms ease;
   font-size: 0.9rem;
 }
 
 .cta-button:hover {
-  background: var(--color-forest);
-  border-color: var(--color-forest);
+  background: var(--color-primary-forest);
+  border-color: var(--color-primary-forest);
 }
 
 .intro-section {
@@ -129,12 +117,12 @@ a {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-walnut);
+  color: var(--color-material-walnut);
 }
 
 h1 {
   margin: 0.5rem 0 1rem;
-  font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+  font-family: var(--font-family-heading);
   font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1.1;
 }
@@ -144,9 +132,9 @@ h1 {
 }
 
 .site-footer {
-  background: var(--color-charcoal);
-  color: var(--color-off-white);
-  border-top: 4px solid var(--color-champagne);
+  background: var(--color-primary-charcoal);
+  color: var(--color-neutral-off-white);
+  border-top: 4px solid var(--color-accent-champagne);
 }
 
 .footer-grid {
@@ -158,13 +146,13 @@ h1 {
 
 .footer-grid h2 {
   margin: 0 0 0.5rem;
-  font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+  font-family: var(--font-family-heading);
   font-size: 1rem;
 }
 
 .footer-grid p {
   margin: 0.2rem 0;
-  color: #d8d8da;
+  color: var(--color-footer-text);
   font-size: 0.92rem;
 }
 
