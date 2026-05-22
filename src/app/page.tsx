@@ -13,7 +13,7 @@ const membershipTiers = [
   },
   {
     name: "Core",
-    summary: "Balanced plan for members who train weekly across golf and tennis.",
+    summary: "Balanced plan for weekly training across golf, tennis, or both.",
     benefits: ["Weekly simulator and court credits", "Priority booking windows"],
     price: "$249-299/mo",
     ctaLabel: "Join Waitlist",
@@ -40,18 +40,28 @@ const membershipTiers = [
   },
 ] as const;
 
+const golfPartnerBrands = [
+  "Callaway",
+  "TaylorMade",
+  "Titleist",
+  "Ping",
+  "Dunlop",
+  "Cobra",
+] as const;
+
 export default function Home() {
   return (
     <>
       <section className="shell home-hero" aria-labelledby="home-hero-title">
-        <p className="eyebrow">Irvine&apos;s Indoor Country-Club Concept</p>
+        <p className="eyebrow">Irvine Indoor Country Club</p>
         <h1 id="home-hero-title">
-          Golf and tennis performance, elevated by a warm urban club atmosphere.
+          Golf and tennis performance, elevated by urban country club luxury.
         </h1>
         <p className="hero-subhead">
-          Baseline Fairway blends simulator-driven golf, indoor tennis training,
-          and a premium social workspace designed for high-performing
-          professionals.
+          Irvine&apos;s premium indoor club for elevated practice and
+          after-work culture. Panoramic virtual-18 golf for groups at 3×
+          simulator scale, classic bays, and intelligent ball-fed tennis on
+          dedicated practice courts.
         </p>
         <a
           className="cta-button hero-cta"
@@ -64,32 +74,32 @@ export default function Home() {
 
       <section className="shell positioning-section" aria-labelledby="positioning-title">
         <div className="positioning-header">
-          <p className="eyebrow">Positioning</p>
-          <h2 id="positioning-title">Three pillars of club lifestyle</h2>
+          <p className="eyebrow">The Experience</p>
+          <h2 id="positioning-title">Performance and club luxury, in three parts</h2>
         </div>
 
         <div className="positioning-grid">
           <article className="positioning-card">
-            <h3>Golf Performance</h3>
+            <h3>Immersive Golf</h3>
             <p>
-              Precision simulator bays and data-informed coaching sessions for
-              after-work practice and weekend progression.
+              Panoramic virtual-18 golf at 3× scale for groups, with classic
+              bays for focused, after-work reps.
             </p>
           </article>
 
           <article className="positioning-card">
-            <h3>Tennis Performance</h3>
+            <h3>Precision Tennis</h3>
             <p>
-              Year-round indoor tennis training focused on technique,
-              consistency, and measurable development.
+              Dedicated practice courts with intelligent ball feeding for
+              year-round rhythm, consistency, and progression.
             </p>
           </article>
 
           <article className="positioning-card">
-            <h3>Club Lifestyle</h3>
+            <h3>Club Life</h3>
             <p>
-              A hospitality-led environment with lounge and work-ready spaces
-              that make sport, social connection, and productivity coexist.
+              Premium lounge and social space for connection, hosting, and
+              elevated after-work culture.
             </p>
           </article>
         </div>
@@ -206,12 +216,16 @@ export default function Home() {
       <section className="shell social-proof-section" aria-labelledby="social-proof-title">
         <p className="eyebrow">Credibility</p>
         <h2 id="social-proof-title">Built for confidence from day one</h2>
-        <div className="social-proof-placeholder">
-          <p>
-            Social proof placeholder: future logos, partner badges, member
-            testimonials, and press mentions will be featured here.
-          </p>
-        </div>
+        <p className="social-proof-lead">
+          Trusted equipment names golfers already know and respect.
+        </p>
+        <ul className="social-proof-brands" aria-label="Golf equipment brands">
+          {golfPartnerBrands.map((brand) => (
+            <li key={brand}>
+              <span className="social-proof-brand">{brand}</span>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <LeadCaptureForm />
